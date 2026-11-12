@@ -1,19 +1,16 @@
-# Travel Budget — Dubaï 🇦🇪
+# Dubaiii — Dubaï
 
-Application web mobile, sans serveur et sans compte, pour estimer le budget de chaque voyageur.
+Version séparée de V1. Contient les six fichiers à déposer à la racine d’un dépôt GitHub Pages de TEST distinct (ou sur une branche de test). Ne remplace pas la V1 avant validation.
 
-## Installation sur GitHub Pages
-1. Crée un dépôt public GitHub, par exemple `travel-budget`.
-2. Ajoute **tous les fichiers de ce dossier à la racine** du dépôt (`index.html`, `style.css`, `app.js`, `manifest.webmanifest`, `icon.svg`).
-3. Dans **Settings → Pages**, choisis **Deploy from a branch**, branche **main**, dossier **/(root)** puis **Save**.
-4. Ouvre l'URL affichée par GitHub Pages dans Safari sur iPhone.
-5. Dans Safari, utilise **Partager → Sur l'écran d'accueil**.
-
-## Personnalisation des catalogues
-Les listes `ACT` et `FOOD` sont au début de `app.js`. Chaque entrée est sous la forme `["Nom", prix_en_euros]`.
+## Nouveautés
+- 60 choix nourriture, un budget moyen indicatif par enseigne, personnalisable.
+- Nombre de personnes global dans Bouffe ; prix × visites × personnes.
+- Participants individuels par activité ; prix × visites × participants.
+- Location facultative et carburant indépendant, suivi de paiement.
+- Totaux et bilan actualisés.
 
 ## Données
-Les informations sont enregistrées via `localStorage` sur chaque navigateur/appareil. Aucun compte, aucune synchronisation, aucun serveur. Effacer les données du site peut effacer le budget. Les prix du catalogue sont des références fournies par l'organisateur et non des tarifs garantis. L'heure d'arrivée est interprétée dans le fuseau de Dubaï UTC+4.
+La V2 utilise `travel-budget-dubai-v2` et importe les données V1 `travel-budget-dubai-v1` si elles existent sur le **même navigateur et la même origine**. Les données ne se synchronisent pas entre appareils ou domaines GitHub Pages distincts. Les tarifs sont des **estimations budgétaires**, pas des prix vérifiés en direct.
 
-## Comptabilité
-Le montant « Économies disponibles » représente l'argent **encore disponible**, pas les versements historiques déjà utilisés pour payer l'avion ou l'hôtel. Quand un voyageur coche un paiement, il doit mettre à jour son épargne disponible si celle-ci a servi à régler ce paiement, afin d'éviter un double comptage.
+## Attention
+Les dépenses payées sont déduites du reste à financer. L'épargne est supposée encore disponible : si elle a servi à payer, mettre à jour le montant épargné.
